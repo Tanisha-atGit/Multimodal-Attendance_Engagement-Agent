@@ -1,0 +1,10 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ClassPulse | Attendance & Engagement</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"></head>
+<body><header class="topbar"><div class="brand">◉ ClassPulse</div><div class="subtitle">Multimodal Attendance & Engagement Agent</div><span class="pill">Offline prototype</span></header>
+<main class="container">
+{% with messages = get_flashed_messages(with_categories=true) %}{% if messages %}<div class="messages">{% for category, message in messages %}<div class="alert {{ category }}">{{ message }}</div>{% endfor %}</div>{% endif %}{% endwith %}
+{% block content %}{% endblock %}
+<footer>Local demo · Data stays in this project folder · Use consented/test data only</footer>
+</main></body></html>
